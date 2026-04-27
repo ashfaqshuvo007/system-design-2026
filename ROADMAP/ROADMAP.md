@@ -4,16 +4,16 @@ Each week pairs theory with a hands‑on project. Build with Java/Python + AWS (
 
 ## Progress Tracker
 
-| Week | Focus Area                           | Hands-On Project                                                                                                                                                             | Status  |
-| ---- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| 1    | Scalability & Caching                | **Distributed URL Shortener** – implement a REST URL shortener with a cache (Redis), then scale it horizontally behind a load balancer.                                      | Pending |
-| 2    | Databases & Sharding                 | **Multi‑tenant Blog Platform** – design a schema that shards posts by user‑ID; practice write‑through caching and read‑replicas.                                             | Pending |
-| 3    | APIs & Message Queues                | **Real‑time Chat Backend** – use WebSockets for real‑time messaging, RabbitMQ for async message delivery, and store chat history in PostgreSQL.                              | Pending |
-| 4    | Distributed Systems (CAP, Consensus) | **Key‑Value Store** – implement a simple eventually‑consistent key‑value store with hinted handoff and read‑repair; simulate network partitions and observe behavior.        | Pending |
-| 5    | Microservices & Patterns             | **E‑Commerce Order Service** – split into microservices (catalog, cart, order, payment) communicating via gRPC; implement the Saga pattern for order checkout.               | Pending |
-| 6    | Search & Data Pipelines              | **Custom Search Engine** – build a web crawler, inverted index, and a query parser; return ranked results. This touches both algorithms and system design.                   | Pending |
-| 7    | Security & Observability             | **Multi‑Factor Auth (MFA) Service** – implement TOTP generation, JWT‑based API authentication, rate limiting, and expose metrics (Prometheus + Grafana).                     | Pending |
-| 8    | Mock Interviews & Refinement         | **Mock HLD + LLD** – each day pick a classic problem (e.g., design Twitter, Uber, parking lot) and draw the architecture, then explain it aloud. Record yourself and review. | Pending |
+| Week | Focus Area                           | Hands-On Project                                                                                                                                                             | Status                                   |
+| ---- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| 1    | Scalability & Caching                | **Distributed URL Shortener** – implement a REST URL shortener with a cache (Redis), then scale it horizontally behind a load balancer.                                      | <font color="yellow">In Progress </font> |
+| 2    | Databases & Sharding                 | **Multi‑tenant Blog Platform** – design a schema that shards posts by user‑ID; practice write‑through caching and read‑replicas.                                             | Pending                                  |
+| 3    | APIs & Message Queues                | **Real‑time Chat Backend** – use WebSockets for real‑time messaging, RabbitMQ for async message delivery, and store chat history in PostgreSQL.                              | Pending                                  |
+| 4    | Distributed Systems (CAP, Consensus) | **Key‑Value Store** – implement a simple eventually‑consistent key‑value store with hinted handoff and read‑repair; simulate network partitions and observe behavior.        | Pending                                  |
+| 5    | Microservices & Patterns             | **E‑Commerce Order Service** – split into microservices (catalog, cart, order, payment) communicating via gRPC; implement the Saga pattern for order checkout.               | Pending                                  |
+| 6    | Search & Data Pipelines              | **Custom Search Engine** – build a web crawler, inverted index, and a query parser; return ranked results. This touches both algorithms and system design.                   | Pending                                  |
+| 7    | Security & Observability             | **Multi‑Factor Auth (MFA) Service** – implement TOTP generation, JWT‑based API authentication, rate limiting, and expose metrics (Prometheus + Grafana).                     | Pending                                  |
+| 8    | Mock Interviews & Refinement         | **Mock HLD + LLD** – each day pick a classic problem (e.g., design Twitter, Uber, parking lot) and draw the architecture, then explain it aloud. Record yourself and review. | Pending                                  |
 
 **Tip:** For each project, write a short README that explains the trade‑offs you made (e.g., why eventual consistency over strong consistency, why Kafka over RabbitMQ). This practice directly mirrors interview expectations.
 
