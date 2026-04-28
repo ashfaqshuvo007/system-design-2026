@@ -33,6 +33,17 @@ The algorithm is the rule that decides which backend server gets each new reques
 
 - **How it works**: The load balancer maintains a list of servers and sends each new request to the next server in the list, cycling back to the start after the last one. **Weighted Round‑Robin** assigns a “weight” to each server based on its capacity (e.g., a server with 2× the CPU gets weight 2). The balancer then distributes requests proportionally.
 
-- **When to use**: Stateless applications with servers of equal (or known‑different) horsepower, where requests are short‑lived and roughly uniform. Classic example: a cluster of identical web servers serving static content.
+- **When to use**:
+  -- Stateless applications with servers of equal (or known‑different) horsepower, where requests are short‑lived and roughly uniform. Classic example: a cluster of identical web servers serving static content.
+  -- You care about simplicity, low overhead, and predictability, not dynamic load awareness
+  -- You already have health checks and session persistence handled separately.
 
 - **Limitation**: Doesn’t consider current server load. If one request is unusually slow, that server may become overloaded while others sit idle.
+
+#### 2.1.2 Least Connections (and weighted Least Connections)
+
+- **How it works**: The balancer tracks the number of active connections to each server and sends the next request to the one with the fewest. Weighted Least‑Connections combines this with server weights.
+
+- **When to use**: Applications with variable‑length connections (e.g., long‑polling, WebSockets, streaming). Also good when servers are not all equal.
+
+- **Limitation**: A server with many very short connections may appear “busy” while a server with one very long connection may appear “free” – weighting helps mitigate this.
