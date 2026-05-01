@@ -47,3 +47,60 @@ The algorithm is the rule that decides which backend server gets each new reques
 - **When to use**: Applications with variable‑length connections (e.g., long‑polling, WebSockets, streaming). Also good when servers are not all equal.
 
 - **Limitation**: A server with many very short connections may appear “busy” while a server with one very long connection may appear “free” – weighting helps mitigate this.
+
+#### 2.1.3 IP‑Hash (Source‑IP Affinity)
+
+- **How it works**: A hash function is applied to the client’s source IP address, and the result determines which server gets the request. Because the hash of a given IP always produces the same result, the same client is always routed to the same server (as long as the server pool is unchanged).
+
+- **When to use**: When we need session persistence (sticky sessions) without storing session state in a shared cache. Also useful for stateful protocols where the server maintains per‑client context.
+
+- **Limitation**: If a server fails, the hash space must be re‑computed, which can cause a sudden re‑distribution and overload the remaining servers.
+
+## 3. Caching
+
+- Keeping fast copies of data we frequently use.
+- **Trade-off**: Sometimes may lead to slightly stale data but makes the app much faster.
+- **Cache invalidation**: deciding when and how to update or delete the cached answer.
+
+We need to think about three aspects:
+
+1. **Where do we cache ?**
+2. **How do we read/write data ?**
+3. **How do we trade off consistency vs. latency vs. complexity ?**
+
+---
+
+![Cache Tier](../images/cacheTier.png)
+
+### 3.1 Where do we cache (layers)
+
+You can place caches at different layers:
+
+- **Browser / CDN**
+
+  -- Static assets (CSS, JS, images, logos) via `Cache‑Control`, `Etag`, `CDN`.
+
+  -- Benefit: No request ever reaches our backend for static stuff.
+
+- **Application layer cache**
+
+  -- In‑memory store (Redis / Memcached) before the database.
+
+  -- _Example_: User profile by `user_id`, product details by `product_id`, expensive aggregate like “top 10 trending items”.
+
+- **Database‑level cache**
+
+  -- Query‑caching, indexes, or in‑memory DB (e.g., Redis‑based for reads).
+
+- **Client‑side cache (web / mobile)**
+
+  -- Local storage, `localStorage`, `IndexedDB`, or in‑memory caches in the app.
+
+- For horizontal scaling, we usually combine:
+
+  -- CDN → Reverse proxy / API gateway → App → Redis cluster → DB.
+  Each layer filters out the “easy” requests so the DB only sees the hard ones.
+
+### 3.2 Common Caching patterns (How do we read/write data)
+
+### 3.3 Caching strategies (read‑through, write‑through, write‑behind)
