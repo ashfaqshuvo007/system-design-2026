@@ -25,10 +25,10 @@ Start with the **[8-Week Practical Roadmap](ROADMAP.md)** for your learning path
 
 ### 📅 Learning Path
 
-| Resource | Purpose |
-|----------|---------|
-| [Main Roadmap](ROADMAP.md) | 8-week curriculum with hands-on projects and progress tracker |
-| [MAANG Roadmap](ROADMAP/ROADMAP-MAANG.md) | Advanced track for FAANG-level system design challenges |
+| Resource                                  | Purpose                                                       |
+| ----------------------------------------- | ------------------------------------------------------------- |
+| [Main Roadmap](ROADMAP.md)                | 8-week curriculum with hands-on projects and progress tracker |
+| [MAANG Roadmap](ROADMAP/ROADMAP-MAANG.md) | Advanced track for FAANG-level system design challenges       |
 
 ---
 
@@ -36,11 +36,11 @@ Start with the **[8-Week Practical Roadmap](ROADMAP.md)** for your learning path
 
 ### 🏗️ System Design References
 
-| Document | Content |
-|----------|---------|
-| [High-Level Design (HLD)](HLD/HLD.md) | Architectural patterns, system components, and design principles |
-| [Low-Level Design (LLD)](LLD/LLD.md) | Detailed implementation patterns and object-oriented design |
-| [Checklist](CHECKLIST.md) | Repository structure best practices and interview-ready templates |
+| Document                              | Content                                                           |
+| ------------------------------------- | ----------------------------------------------------------------- |
+| [High-Level Design (HLD)](HLD/HLD.md) | Architectural patterns, system components, and design principles  |
+| [Low-Level Design (LLD)](LLD/LLD.md)  | Detailed implementation patterns and object-oriented design       |
+| [Checklist](CHECKLIST.md)             | Repository structure best practices and interview-ready templates |
 
 ---
 
@@ -67,13 +67,16 @@ Mid-size companies (100-2000 employees) often ask take-home system designs or li
 ### 🔧 Integrating Your Existing Skills
 
 **Containerization & Orchestration:**
+
 - Docker & Docker Compose will be your default for every project. This signals that you think in terms of reproducible environments.
 - By Weeks 5–6, experiment with Kubernetes (using `kind` locally). For mid-size companies, solid Docker Compose + CI is often sufficient; K8s is a bonus.
 
 **CI/CD Pipeline:**
+
 - GitHub Actions for every project. This demonstrates your ability to automate testing and deployment.
 
 **Cloud Operations (AWS/GCP/Azure):**
+
 - In each project README, explicitly map local services to managed equivalents:
   - Docker Redis → AWS ElastiCache
   - PostgreSQL → RDS
