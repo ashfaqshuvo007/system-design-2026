@@ -1,4 +1,4 @@
-🔥 **Mastering EDA, CQRS & Event Sourcing for Scalable Systems** 🔥
+# 🔥 **Mastering EDA, CQRS & Event Sourcing for Scalable Systems** 🔥
 
 Event-driven architecture (EDA) uses events to trigger actions, decoupling services for better scalability. CQRS separates command (write) and query (read) models; Event Sourcing stores state as an immutable event log instead of current snapshots. [geeksforgeeks](https://www.geeksforgeeks.org/system-design/difference-between-cqrs-and-event-sourcing/)
 
@@ -31,8 +31,7 @@ EDA decouples vs. CRUD's tight coupling—but introduces latency/indirection. Ba
 Thoughts? When have you battled scalability with EDA? Drop comments! 👇
 
 #SystemDesign #EventDrivenArchitecture #CQRS #EventSourcing #Microservices #Kafka #Scalability #MAANG #SoftwareEngineering #TechStack
-
-(2,847 chars) 🚀
+🚀
 
 Day 11/60: #SystemDesignInterviewPrep
 Event-driven architecture (EDA) uses events to trigger actions, decoupling services for better scalability. CQRS separates command (write) and query (read) models; Event Sourcing stores state as an immutable event log instead of current snapshots.
