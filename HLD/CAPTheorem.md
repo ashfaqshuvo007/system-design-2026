@@ -1,4 +1,4 @@
-# 🔥 **CAP Theorem** 🔥
+# 🔥 **CAP Theorem**
 
 CAP stands for **Consistency**, **Availability**, **Partition tolerance**. It’s a proven theorem (Gilbert & Lynch, 2022) about distributed systems: you can only guarantee two of those three properties during a network partition.
 
