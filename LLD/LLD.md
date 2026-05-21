@@ -1,4 +1,14 @@
-# 🛠 Curated Topics for Low‑Level Design (LLD)
+# Low-Level Design (LLD) & SOLID Principles
+
+LLD is the detailed blueprint of how individual components are implemented: classes, methods, data structures, and their interactions. As an engineer, LLD is where you prove you can turn architecture into clean, maintainable, extensible code.
+
+| Aspect     | High-Level Design (HLD)                          | Low-Level Design (LLD)                           |
+| ---------- | ------------------------------------------------ | ------------------------------------------------ |
+| Focus      | System architecture, scalability, reliability    | Class design, logic, OOP principles              |
+| Concerns   | Load balancers, sharding, caching, microservices | Encapsulation, SOLID, design patterns            |
+| When asked | Senior/architect roles                           | Mid-level & entry-level (tests OOP fundamentals) |
+
+## 🛠 Curated Topics for Low‑Level Design (LLD)
 
 LLD interviews assess your ability to write clean, extensible code using OOP and design patterns.
 
